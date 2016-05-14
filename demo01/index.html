@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../build/es5-shim.min.js"></script>
+    <script type="text/javascript" src="../build/es5-sham.min.js"></script>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <style>
+      .error{
+        border: 1px solid red;
+      }
+      .right{
+        border: 1px solid black;
+      }
+      .invalid:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: red;
+        opacity: 1;
+      }
+      .invalid::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: red;
+        opacity: 1;
+      }
+      input.invalid:-ms-input-placeholder{
+        color: red;
+      }
+      input.invalid::-webkit-input-placeholder {
+        color: red;
+      }
+      .btn{
+        background-color: red;
+        color: white;
+      }
+      .btngray{
+        background-color: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <script type="text/babel">
+      var MyForm = React.createClass({
+        getInitialState: function() {
+          return {
+            username: "",
+            usernameError: "真实姓名（必填）",
+            usernameStyle:"right",
+
+            agencyname: "",
+            agencynameError: "机构名称（必填）",
+            agencynameStyle:"right",
+
+            phonenum: "",
+            phonenumError: "手机号码（必填）",
+            phonenumStyle:"right",
+
+
+            verifycode:"",
+            verifycodeError: "请输入验证码",
+            verifycodeStyle:"right",
+
+            email: "",
+            emailError: "公司邮箱（使用此邮箱登录，请填写正确的邮箱信息）",
+            emailStyle:"right",
+
+            qq:"",
+            qqError: "QQ号码",
+            qqStyle:"right",
+
+            btntxt:"获取验证码",
+            btnstyle:"btn",
+            btndisable:true,
+            countdown:5
+
+          };
+        },
+        handleUsername: function(e) {
+          var value = e.target.value;
+          this.setState({
+            username: value,
+          });
+        },
+
+
+        handleAgencyname: function(e) {
+          var value = e.target.value;
+          this.setState({
+            agencyname: value,
+          });
+        },
+        handlePhonenum: function(e) {
+          var value = e.target.value;
+          this.setState({
+            phonenum: value,
+          });
+        },
+        handleEmail: function(e) {
+          var value = e.target.value;
+          this.setState({
+            email: value
+          });
+        },
+        handleVerifycode: function(e) {
+          var value = e.target.value;
+          this.setState({
+            verifycode: value
+          });
+        },
+
+        handleQQ: function(e) {
+          var value = e.target.value;
+          this.setState({
+            qq: value
+          });
+        },
+        //倒计时方法
+        countdownfuc: function () {
+          if (this.state.countdown == 0) {
+            this.setState({
+              btntxt: "获取验证码",
+              btnstyle:"btn",
+              btndisable:true,
+              countdown : 5,
+            });
+            return;
+          } else {
+            this.setState({
+              btntxt: "重新发送(" + this.state.countdown + ")",
+              btnstyle:"btngray",
+              btndisable:false,
+              countdown : this.state.countdown-1
+            });
+          } ;
+
+          setTimeout(function() {
+            this.countdownfuc();
+          }.bind(this),1000);
+        } ,
+         function(e){
+          var clock = '';
+          var nums = 10;
+           var txt="获取验证码";
+
+          function sendCode(anniu)
+          {
+//            var btn=anniu;
+//            btn.disabled = true; //将按钮置为不可点击
+
+            this.setState({
+              btntxt: "获取验证码",
+              btnstyle:"btn",
+              btndisable:true
+            });
+
+//            btn.value = '重新获取（'+nums+")";
+//            btn.style.backgroundColor="gray";
+//            clock = setInterval(doLoop, 1000); //一秒执行一次
+          }
+          function doLoop()
+          {
+            nums--;
+            if(nums > 0){
+              this.setState({
+                btntxt: '重新获取('+nums+")",
+                btnstyle:"btngray",
+                btndisable:false
+              });
+
+            }else{
+              clearInterval(clock); //清除js定时器
+              this.setState({
+                btntxt: "获取验证码",
+                btnstyle:"btn",
+                btndisable:true
+              });
+              nums = 10;
+            }
+          }
+          sendCode(e.target);
+      },
+        handleSubmit:function (e) {
+          //用户名验证
+          var usernamevalue = this.state.username;
+          var usererror = '';
+          var userstyle="right";
+          if(usernamevalue.trim()=='') {
+            usererror = '请输入用户名';
+            userstyle="error invalid" ;
+            e.preventDefault();
+          }
+          this.setState({
+            usernameError: usererror,
+            usernameStyle:  userstyle
+          });
+          //机构名称验证
+          var agencynamevalue = this.state.agencyname;
+          var agencynameerror = '';
+          var agencynamestyle="right";
+          if(agencynamevalue.trim()=='') {
+            agencynameerror = '请输入机构名称';
+            agencynamestyle="error invalid" ;
+            event.preventDefault();
+          }
+          this.setState({
+            agencynameError: agencynameerror,
+            agencynameStyle:agencynamestyle
+          });
+          //电话验证
+          var phonenumvalue = this.state.phonenum;
+          var phonenumerror = '';
+          var phonenumstyle="right";
+          if(!(/^1[3|4|5|7|8]\d{9}$/.test(phonenumvalue))) {
+            phonenumerror = '请输入正确的手机号';
+            phonenumstyle="error invalid" ;
+            e.preventDefault();
+          }
+          this.setState({
+            phonenumError: phonenumerror,
+            phonenumStyle: phonenumstyle
+          });
+          // 公司邮箱验证
+          var emailvalue = this.state.email;
+          var emailerror = '';
+          var emailstyle ='right';
+          if(!(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(emailvalue))) {
+            emailerror = '请输入正确的Email';
+            emailstyle="error invalid" ;
+            event.preventDefault();
+          }
+          this.setState({
+            emailError: emailerror,
+            emailStyle:  emailstyle
+          });
+        },
+        render: function() {
+          return (
+                  <form action="success.html" onSubmit={this.handleSubmit}>
+                    <div>
+                      <p>
+                        <input type='text' name='username' id='username' placeholder={this.state.usernameError} className={this.state.usernameStyle} value={this.state.username}  onChange={this.handleUsername} />
+                      </p>
+                      <p>
+                        <input type='text' name='agencyname' id='agencyname'placeholder={this.state.agencynameError} className={this.state.agencynameStyle}  value={this.state.agencyname} onChange={this.handleAgencyname} />
+
+                      </p>
+                      <p>
+                      <input type='text' name='phonenum' id='phonenum' placeholder={this.state.phonenumError} className={this.state.phonenumStyle} value={this.state.phonenum} onChange={this.handlePhonenum} />
+                    </p>
+                      <p>
+                        <input type='text' name='verifycode' id='verifycode' placeholder={this.state.verifycodeError} className={this.state.verifycodeStyle}  onChange={this.handleVerifycode} />
+                        <input type="button"   value={this.state.btntxt} className={this.state.btnstyle} disabled={!this.state.btndisable} onClick={this.countdownfuc} />
+
+                      </p>
+                      <p>
+                        <input type='text' name='email'  id='email' placeholder={this.state.emailError} className={this.state.emailStyle}  value={this.state.email} onChange={this.handleEmail} />
+
+                      </p>
+                      <p>
+                        <input type='text' name='phonenum' id='qqnum' placeholder="QQ号码" value={this.state.qq} onChange={this.handleQQ} />
+                      </p>
+                    </div>
+                    <input type="submit" value="提交"/>
+                  </form>
+          )
+        }
+      });
+      ReactDOM.render(
+              <MyForm />,
+              document.getElementById("div1")
+      );
+    </script>
+
+    <script>
+//      $(function(){
+//        if(!placeholderSupport()){   // 判断浏览器是否支持 placeholder
+//          $('[placeholder]').focus(function() {
+//            var input = $(this);
+//            if (input.val() == input.attr('placeholder')) {
+//              input.val('');
+//              input.removeClass('placeholder');
+//            }
+//          }).blur(function() {
+//            var input = $(this);
+//            if (input.val() == '' || input.val() == input.attr('placeholder')) {
+//              input.addClass('placeholder');
+//              input.val(input.attr('placeholder'));
+//            }
+//          }).blur();
+//        };
+//      })
+//      function placeholderSupport() {
+//        return 'placeholder' in document.createElement('input');
+//      }
+    </script>
+  </body>
+</html>

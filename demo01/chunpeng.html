@@ -1,0 +1,60 @@
+<!Doctype>
+<html>
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        .wrap{
+            width:800px;height:200px;
+            background-color: yellow;
+            overflow: hidden;
+            padding: 50px;
+
+        }
+        .wrap .bgl{
+            width: 100px;height:100px;
+            background-color: silver;
+            position: relative;top:50%;
+            margin:-50px 50px 0 50px;
+            float:left;
+        }
+        .wrap .bgr{
+            width: 100px;height:100px;
+            background-color: silver;
+            position: relative;top:50%;
+            margin:-50px 50px 0 50px;
+            float:right;
+        }
+        .wrap p{
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="rows">
+
+</div>
+<script type="text/babel">
+    var HelloMessage  = React.createClass({
+        render: function() {
+
+            return (
+                    <div id="wrap">
+
+                        <div className ="bg"></div>
+                        <p>Hello {this.props.txt}</p>
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(
+            <HelloMessage txt="John" />,
+            document.getElementById("rows")
+    );
+
+</script>
+
+</body>
+</html>

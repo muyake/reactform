@@ -1,0 +1,119 @@
+<!Doctype>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        .wrap{
+            width:800px;height:200px;
+            background-color: yellow;
+            overflow: hidden;
+            padding: 50px;
+
+        }
+        .wrap .bgl{
+            width: 100px;height:100px;
+            background-color: silver;
+            position: relative;
+            top:50%;
+            margin:-50px 50px 0 50px;
+            float:left;
+        }
+        .wrap .bgc{
+            width: 300px;height:100px;
+            background-color: silver;
+            position: relative;top:50%; left: 50%;
+            margin:-50px 50px 0 -150px;
+            float:left;
+        }
+        .wrap .bgr{
+            width: 100px;height:100px;
+            background-color: silver;
+            position: relative;top:50%;
+            margin:-50px 50px 0 50px;
+            float:right;
+        }
+        .wrap p{
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="rows">
+</div>
+<br>
+<div id="rows1">
+
+</div>
+<script type="text/babel">
+    var RowMessage  = React.createClass({
+        render: function() {
+                   var bg=this.props.bg;
+            return (
+                    <div className="wrap">
+                        <div className ={bg}><img src={this.props.imgurl}/></div>
+                        <p>Hello {this.props.txt}</p>
+                    </div>
+            );
+        }
+    });
+  var HelloMessage  = React.createClass({
+      handleClick: function() {
+        alert("Hello");
+      },
+        render: function() {
+            var bg=this.props.bg;
+            var pstyle={
+                lineHeight: '24px'
+            };
+
+            //自定义属性
+            function attachCustomAttributes(domNode) {
+                if (domNode) {
+                    domNode.setAttribute('autoplay',"autoplay");
+                }
+            }
+            return (
+                    <div className='wrap'>
+                        <video ref={attachCustomAttributes} style={{width:"100%",height:"100%"}}>
+                            <source src="./video/a.mp4" type="video/mp4"/>
+                            <source src="./video/a.webm" type="video/webm"/>
+                            <source src="./video/a.ogv" type="video/ogg"/>
+                        </video>
+                        <div className='bgc'>
+                            <p style={pstyle}>
+                                用科技开启金融服务行业的新时代
+                            </p>
+                            <input type="button" value="立即使用" onClick={this.handleClick} />
+                        </div>
+                    </div>
+            );
+        }
+    });
+    var NotesList = React.createClass({
+        render: function() {
+            return (
+                    <div>
+                        {
+                            this.props.children
+                        }
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(
+            <NotesList>
+                <HelloMessage></HelloMessage>
+                <RowMessage txt="lefcontent" bg="bgl" imgurl="./img/1.png"/>
+                <RowMessage txt="rightcontent" bg="bgr" imgurl="./img/2.png"/>
+                <RowMessage txt="lefcontent" bg="bgl" imgurl="./img/3.png"/>
+            </NotesList>,
+            document.getElementById("rows")
+    );
+</script>
+
+</body>
+</html>

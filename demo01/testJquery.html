@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+<div>
+    sdfsdf
+</div>
+<div>
+    <form action="" onsubmit="return toVaild()">
+        <p>
+            <input type="text" id="username" placeholder="真实姓名（必填）">
+        </p>
+        <input type="submit">
+    </form>
+
+</div>
+<div id="div1"></div>
+<script>
+    function toVaild(){
+        var user = $("#username").val();
+        $('#div1').parent().append('<span style="color:red;">aaa</span>');
+        return false;
+    }
+</script>
+</body>
+</html>

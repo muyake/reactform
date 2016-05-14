@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" style="height:32px;width:120px;" class="btn" value="获取验证码" onclick="func(this)" />
+<script type="text/javascript">
+
+    function func(thisBtn) {
+        var clock = '';
+        var nums = 10;
+        var btn;
+        function sendCode()
+        {
+            btn = thisBtn;
+            btn.disabled = true; //将按钮置为不可点击
+            btn.value = '重新获取（'+nums+")";
+            btn.style.backgroundColor="gray";
+            clock = setInterval(doLoop, 1000); //一秒执行一次
+        }
+        function doLoop()
+        {
+            nums--;
+            if(nums > 0){
+                btn.value = '重新获取('+nums+")";
+            }else{
+                clearInterval(clock); //清除js定时器
+                btn.disabled = false;
+                btn.style.backgroundColor="red";
+                btn.value = '获取验证码';
+                nums = 10;
+            }
+        }
+        sendCode();
+    }
+
+</script>
+
+</body>
+</html>

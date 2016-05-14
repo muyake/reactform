@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery.min.js"></script>
+    <style>
+        .invalid:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: red;
+            opacity: 1;
+        }
+        .invalid::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: red;
+            opacity: 1;
+        }
+        input.invalid:-ms-input-placeholder{
+            color: red;
+        }
+        input.invalid::-webkit-input-placeholder {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        //第一种方法
+//        $(document).ready(function(){
+//            var doc=document,inputs=doc.getElementsByTagName('input'),supportPlaceholder='placeholder'in doc.createElement('input'),placeholder=function(input){var text=input.getAttribute('placeholder'),defaultValue=input.defaultValue;
+//                if(defaultValue==''){
+//                    input.value=text}
+//                input.onfocus=function(){
+//                    if(input.value===text){this.value=''}};
+//                input.onblur=function(){if(input.value===''){this.value=text}}};
+//            if(!supportPlaceholder){
+//                for(var i=0,len=inputs.length;i<len;i++){var input=inputs[i],text=input.getAttribute('placeholder');
+//                    if(input.type==='text'&&text){placeholder(input)}}}});
+
+//        //第二种方法
+//
+        $(function(){
+            if(!placeholderSupport()){   // 判断浏览器是否支持 placeholder
+                $('[placeholder]').focus(function() {
+                    var input = $(this);
+                    if (input.val() == input.attr('placeholder')) {
+                        input.val('');
+                        input.removeClass('placeholder');
+                    }
+                }).blur(function() {
+                    var input = $(this);
+                    if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                        input.addClass('placeholder');
+                        input.val(input.attr('placeholder'));
+                    }
+                }).blur();
+            };
+        })
+        function placeholderSupport() {
+            return 'placeholder' in document.createElement('input');
+        }
+    </script>
+</head>
+
+<body>
+<form>
+    <label for="name">用户名：</label>
+    <input type="text" class="invalid" placeholder="请输入用户名"/>
+</form>
+</body>
+</html>

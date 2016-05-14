@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <title>Title</title>
+    <style type="text/css">
+        .tryuse{
+            background-image: url("./img/5.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 70%;
+            margin: 0 auto;
+            height: 600px;
+        }
+        .tryusecontent {
+            color: white;
+        }
+        .tryusecontent h1{
+            font-size: 48px;
+            font-family:微软雅黑;
+            padding-top: 50px;
+        }
+        .tryusecontent p{
+            font-size: 16px;
+            font-family: 微软雅黑;
+            padding-top: 30px;
+        }
+        .title{
+             text-align: center;
+        }
+        .form{
+             text-align: center;
+        }
+        .form input[type="text"] {
+
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+    </style>
+    <script  src="./js/jquery.min.js">
+
+    </script>
+
+</head>
+<body>
+    <section class="tryuse">
+        <div class="tryusecontent">
+            <div class="title">
+                   <h1>
+                       申请试用
+                   </h1>
+                    <p>
+                        欢迎申请试用MATRIX，请填写以下内容， 我们将会在24小时内联系您，为您定制账户。
+                    </p>
+            </div>
+            <div class="form" >
+                <form action="" onsubmit="return toVaild()">
+                    <p>
+                        <input type="text" id="username" placeholder="真实姓名（必填）" >
+                    </p>
+                    <input type="submit">
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <div>
+
+    </div>
+<script>
+    function toVaild(){
+        var user = $("#username");
+        if(user.val() == ""){
+          user.parent().append('<span style="color:red;">aaa</span>');
+            return false;
+        }
+              else{
+                      alert("校验失败，不进行提交");
+                      return false;
+                  }
+          }
+</script>
+</body>
+</html>
