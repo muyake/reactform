@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>pro.html</title>
+    <style type="text/css">
+        .checkCode {
+            cursor: pointer;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 26px;
+            width: 115px;
+            height: 35px;
+        }
+    </style>
+    <script type="text/javascript">
+        var sleep = 5, interval = null;
+        window.onload = function ()
+        {
+            var btn = document.getElementById ('btn');
+            btn.onclick = function ()
+            {
+                if (!interval)
+                {
+                    this.style.backgroundColor = 'rgb(243, 182, 182)';
+                    this.disabled = "disabled";
+                    this.style.cursor = "wait";
+                    this.value = "重新发送 (" + sleep-- + ")";
+                    interval = setInterval (function ()
+                    {
+                        if (sleep == 0)
+                        {
+                            if (!!interval)
+                            {    alert(1);
+                                clearInterval (interval);
+                                interval = null;
+                                sleep = 30;
+                                btn.style.cursor = "pointer";
+                                btn.removeAttribute ('disabled');
+                                btn.value = "免费获取验证码";
+                                btn.style.backgroundColor = '';
+                                alert(2);
+                            }
+                            return false;
+                        }
+                        btn.value = "重新发送 (" + sleep-- + ")";
+                    }, 1000);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input class="checkCode" type="button" id="btn" value="免费获取验证码" />
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+
+</script>
+</body>
+</html>

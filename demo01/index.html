@@ -72,117 +72,59 @@
 
             btntxt:"获取验证码",
             btnstyle:"btn",
-            btndisable:true,
+            btndisable:"",
             countdown:5
 
           };
         },
-        handleUsername: function(e) {
-          var value = e.target.value;
-          this.setState({
-            username: value,
-          });
-        },
-
-
-        handleAgencyname: function(e) {
-          var value = e.target.value;
-          this.setState({
-            agencyname: value,
-          });
-        },
-        handlePhonenum: function(e) {
-          var value = e.target.value;
-          this.setState({
-            phonenum: value,
-          });
-        },
-        handleEmail: function(e) {
-          var value = e.target.value;
-          this.setState({
-            email: value
-          });
-        },
-        handleVerifycode: function(e) {
-          var value = e.target.value;
-          this.setState({
-            verifycode: value
-          });
-        },
-
-        handleQQ: function(e) {
-          var value = e.target.value;
-          this.setState({
-            qq: value
-          });
+        handleChange:function (name, event) {
+          var newState={};
+          newState[name]=event.target.value;
+          this.setState(newState);
         },
         //倒计时方法
-        countdownfuc: function () {
-          if (this.state.countdown == 0) {
+        interval:null,
+        sleep:10,
+        clickHandle:function () {
+          if(!this.interval)
+          {
+            var text=   " (" + this.sleep-- +")秒后重新发送";
             this.setState({
-              btntxt: "获取验证码",
-              btnstyle:"btn",
-              btndisable:true,
-              countdown : 5,
-            });
-            return;
-          } else {
-            this.setState({
-              btntxt: "重新发送(" + this.state.countdown + ")",
+              btntxt: text,
               btnstyle:"btngray",
-              btndisable:false,
-              countdown : this.state.countdown-1
+              btndisable:"disabled"
             });
-          } ;
-
-          setTimeout(function() {
-            this.countdownfuc();
-          }.bind(this),1000);
-        } ,
-         function(e){
-          var clock = '';
-          var nums = 10;
-           var txt="获取验证码";
-
-          function sendCode(anniu)
-          {
-//            var btn=anniu;
-//            btn.disabled = true; //将按钮置为不可点击
-
-            this.setState({
-              btntxt: "获取验证码",
-              btnstyle:"btn",
-              btndisable:true
-            });
-
-//            btn.value = '重新获取（'+nums+")";
-//            btn.style.backgroundColor="gray";
-//            clock = setInterval(doLoop, 1000); //一秒执行一次
+            this.interval=   setInterval(this.tick,1000);
           }
-          function doLoop()
+        },
+        tick:function () {
+          if (this.sleep == 0)
           {
-            nums--;
-            if(nums > 0){
-              this.setState({
-                btntxt: '重新获取('+nums+")",
-                btnstyle:"btngray",
-                btndisable:false
-              });
+            if (!!this.interval)
+            {
 
-            }else{
-              clearInterval(clock); //清除js定时器
+              clearInterval (this.interval);
+              this.interval = null;
+              this.sleep = 10;
               this.setState({
-                btntxt: "获取验证码",
+                btntxt: "重新发送",
                 btnstyle:"btn",
-                btndisable:true
+                btndisable:""
               });
-              nums = 10;
             }
+            return false;
           }
-          sendCode(e.target);
-      },
+          this.setState({
+            btntxt: " (" + this.sleep-- +")秒后重新发送",
+            btnstyle:"btngray",
+            btndisable:"disabled"
+          });
+          //btn.value = "重新发送 (" + this.sleep-- + ")";
+        },
+
         handleSubmit:function (e) {
           //用户名验证
+
           var usernamevalue = this.state.username;
           var usererror = '';
           var userstyle="right";
@@ -240,26 +182,26 @@
                   <form action="success.html" onSubmit={this.handleSubmit}>
                     <div>
                       <p>
-                        <input type='text' name='username' id='username' placeholder={this.state.usernameError} className={this.state.usernameStyle} value={this.state.username}  onChange={this.handleUsername} />
+                        <input type='text' name='username' id='username' placeholder={this.state.usernameError} className={this.state.usernameStyle} value={this.state.username}  onChange={this.handleChange.bind(this,"username")} />
                       </p>
                       <p>
-                        <input type='text' name='agencyname' id='agencyname'placeholder={this.state.agencynameError} className={this.state.agencynameStyle}  value={this.state.agencyname} onChange={this.handleAgencyname} />
+                        <input type='text' name='agencyname' id='agencyname'placeholder={this.state.agencynameError} className={this.state.agencynameStyle}  value={this.state.agencyname} onChange={this.handleChange.bind(this,"agencyname") }/>
 
                       </p>
                       <p>
-                      <input type='text' name='phonenum' id='phonenum' placeholder={this.state.phonenumError} className={this.state.phonenumStyle} value={this.state.phonenum} onChange={this.handlePhonenum} />
+                      <input type='text' name='phonenum' id='phonenum' placeholder={this.state.phonenumError} className={this.state.phonenumStyle} value={this.state.phonenum} onChange={this.handleChange.bind(this,"phonenum")} />
                     </p>
                       <p>
-                        <input type='text' name='verifycode' id='verifycode' placeholder={this.state.verifycodeError} className={this.state.verifycodeStyle}  onChange={this.handleVerifycode} />
-                        <input type="button"   value={this.state.btntxt} className={this.state.btnstyle} disabled={!this.state.btndisable} onClick={this.countdownfuc} />
+                        <input type='text' name='verifycode' id='verifycode' placeholder={this.state.verifycodeError} className={this.state.verifycodeStyle}  onChange={this.handleChange.bind(this,"verifycode")} />
+                        <input type="button"   value={this.state.btntxt} className={this.state.btnstyle} disabled={this.state.btndisable} onClick={this.clickHandle} />
 
                       </p>
                       <p>
-                        <input type='text' name='email'  id='email' placeholder={this.state.emailError} className={this.state.emailStyle}  value={this.state.email} onChange={this.handleEmail} />
+                        <input type='text' name='email'  id='email' placeholder={this.state.emailError} className={this.state.emailStyle}  value={this.state.email} onChange={this.handleChange.bind(this,"email")} />
 
                       </p>
                       <p>
-                        <input type='text' name='phonenum' id='qqnum' placeholder="QQ号码" value={this.state.qq} onChange={this.handleQQ} />
+                        <input type='text' name='qq' id='qq' placeholder="QQ号码" value={this.state.qq} onChange={this.handleChange.bind(this,"qq")} />
                       </p>
                     </div>
                     <input type="submit" value="提交"/>

@@ -3,27 +3,38 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script  src="js/jquery.js"></script>
 </head>
 
 <body>
-<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" />
-<script type="text/javascript">
-    var countdown=5;
-    function settime(val) {
-        if (countdown == 0) {
-            val.removeAttribute("disabled");
-            val.value="免费获取验证码";
-            countdown = 5;
-        } else {
-            val.setAttribute("disabled", true);
-            val.value="重新发送(" + countdown + ")";
-            countdown--;
+<form action="http://www.helloweba.com/" method="post" name="myform">
+    <input type="button" class="button" value="获取手机验证码"  name="phone" onclick="showtime(30)">
+</form>
+<script>
+    function showtime(t){
+        document.myform.phone.disabled=true;
+        t=10;
+        var i;
+        for(i=1;i<=t;i++) {
+            window.setTimeout("update_p(" + i + ","+t+")", i * 1000);
+            // window.setTimeout(update_p(i ,t), i * 1000);
+            console.log(i);
         }
-        setTimeout(function() {
-            settime(val)
-        },1000)
+    }
+
+    function update_p(num,t) {
+        console.log("调用"+num);
+        if(num == t) {
+
+            document.myform.phone.value =" 重新发送 ";
+            document.myform.phone.disabled=false;
+        }
+        else {
+            printnr = t-num;
+            document.myform.phone.value = " (" + printnr +")秒后重新发送";
+        }
     }
 </script>
+
 </body>
 </html>

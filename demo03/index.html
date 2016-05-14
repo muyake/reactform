@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8">
+
   <head>
     <script src="../build/react.js"></script>
     <script src="../build/react-dom.js"></script>
@@ -8,13 +10,69 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-      var arr = [
-        <h1>Hello world!</h1>,
-        <h2>React is awesome</h2>,
-      ];
+      var HelloMessage = React.createClass({
+        getInitialState: function() {
+          return {
+            btntxt:"获取手机验证码",
+            countdown:5,
+            btndisable:""
+          }
+        },
+        interval:null,
+        sleep:10,
+        clickHandle:function () {
+          if(!this.interval)
+          {
+            var text=   " (" + this.sleep-- +")秒后重新发送";
+            this.setState({
+              btntxt: text,
+              btnstyle:"btn",
+              btndisable:"disabled"
+            });
+            this.interval=   setInterval(this.tick,1000);
+          }
+        },
+        tick:function () {
+          if (this.sleep == 0)
+          {
+            if (!!this.interval)
+            {
+
+              clearInterval (this.interval);
+              this.interval = null;
+             this.sleep = 10;
+              this.setState({
+                btntxt: "重新发送",
+                btnstyle:"btn",
+                btndisable:""
+              });
+            }
+            return false;
+          }
+          this.setState({
+            btntxt: " (" + this.sleep-- +")秒后重新发送",
+            btnstyle:"btn",
+            btndisable:"disabled"
+          });
+          //btn.value = "重新发送 (" + this.sleep-- + ")";
+        },
+        handleChangle:function () {
+          this.setState({
+            btndisable:""
+          });
+        } ,
+        render: function() {
+          return (
+                  <div>
+                    <input type="button" value={this.state.btntxt} disabled={this.state.btndisable}  ref="getcode" onClick={this.clickHandle}/>
+                  </div>
+          )
+        }
+      });
+
       ReactDOM.render(
-        <div>{arr}</div>,
-        document.getElementById('example')
+              <HelloMessage name="John" />,
+              document.getElementById('example')
       );
     </script>
   </body>
