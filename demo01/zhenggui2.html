@@ -17,7 +17,7 @@
             background-image: url("./img/backimg.png");
             background-repeat: repeat;
             background-size: 100%;
-            width: 70%;
+            width: 100%;
             min-width: 510px;
             margin: 0 auto;
             background-color: red;
@@ -57,26 +57,29 @@
         }
     </style>
     <style>
-        .error{
+        .error input[type='text']{
             color: white;
             border: 1px solid red;
         }
-        .right{
+        .right input[type='text']{
             color: white;
             border: 1px solid white;
         }
-        .invalid:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        .invalid input:-placeholder { /* Mozilla Firefox 4 to 18 */
             color: red;
             opacity: 1;
         }
-        .invalid::-moz-placeholder { /* Mozilla Firefox 19+ */
+        .invalid input::-moz-placeholder { /* Mozilla Firefox 19+ */
             color: red;
             opacity: 1;
         }
-        input.invalid:-ms-input-placeholder{
+        .invalid input:-ms-input-placeholder{
             color: red;
         }
-        input.invalid::-webkit-input-placeholder {
+        .invalid input::-webkit-input-placeholder {
+            color: red;
+        }
+        .invalid .wrap_placeholder span{
             color: red;
         }
         .btn{

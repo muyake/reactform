@@ -39,14 +39,19 @@ var JPlaceHolder = {
             $wrap.css({"margin-top": -h/2,'margin-bottom':10});
             holder.css({"position": "relative","left":(w1-w)/2+20});
             self.focusin(function(e) {
-                holder.css({opacity: 0})
+             $wrap.css({visibility: 'hidden'})
+               // holder.css({visibility:true})
+                //holder.hide();
             }).focusout(function(e) {
                     if(!self.val()){
-                        holder.css({opacity: 1})
+                        //  holder.show();
+                        $wrap.css({visibility: 'visible'})
+                      //  holder.css({visibility:false})
                     }
                 });
             holder.click(function(e) {
-                holder.css({opacity: 0})
+                // holder.hide();
+                $wrap.css({visibility: 'hidden'})
                 self.focus();
             });
         });

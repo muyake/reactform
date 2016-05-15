@@ -2,7 +2,10 @@ var MyForm = React.createClass({
     componentDidMount: function(){
         //执行
         JPlaceHolder.init();
+
     },
+
+
     getInitialState: function() {
         return {
             username: "",
@@ -45,6 +48,7 @@ var MyForm = React.createClass({
     //倒计时方法
     interval:null,
     sleep:10,
+    flog:true,
     clickHandle:function () {
         if(!this.interval)
         {
@@ -80,7 +84,13 @@ var MyForm = React.createClass({
         });
         //btn.value = "重新发送 (" + this.sleep-- + ")";
     },
-
+    addPlaceholder: function(msg,id){
+        var $p = $('#'+id).parent();
+        if($p.find('.wrap_placeholder').length){
+            $p.find('.wrap_placeholder span').text(msg);
+            $p.find("input[type='text']").trigger("focusout");
+        }
+    },
     handleSubmit:function (e) {
         //用户名验证
         var usernamevalue1 = this.state.username;
@@ -89,7 +99,14 @@ var MyForm = React.createClass({
         if(usernamevalue1.trim()=='') {
             usererror1 = '请输入用户名';
             userstyle1="error invalid" ;
-            e.preventDefault();
+            this.flog=false;
+            this.addPlaceholder(usererror1,'username');
+            if ( e && e.preventDefault )
+                e.preventDefault();
+            //IE中阻止函数器默认动作的方式
+            else
+                window.event.returnValue = false;
+//            return false;
         }
         this.setState({
             usernameError: usererror1,
@@ -102,7 +119,13 @@ var MyForm = React.createClass({
         if(agencynamevalue1.trim()=='') {
             agencynameerror1 = '请输入机构名称';
             agencynamestyle1="error invalid" ;
-            event.preventDefault();
+            this.addPlaceholder(agencynameerror1,'agencyname');
+            if ( e && e.preventDefault )
+                e.preventDefault();
+            //IE中阻止函数器默认动作的方式
+            else
+                window.event.returnValue = false;
+//            return false;
         }
         this.setState({
             agencynameError: agencynameerror1,
@@ -116,7 +139,13 @@ var MyForm = React.createClass({
             phonenumerror1 = '请输入正确的手机号';
             phonenumstyle1="error invalid" ;
             phonenumvalue1="";
-            e.preventDefault();
+            this.addPlaceholder(phonenumerror1,'phonenum');
+            if ( e && e.preventDefault )
+                e.preventDefault();
+            //IE中阻止函数器默认动作的方式
+            else
+                window.event.returnValue = false;
+//            return false;
         }
         this.setState({
             phonenum:phonenumvalue1,
@@ -127,11 +156,18 @@ var MyForm = React.createClass({
         var emailvalue1 = this.state.email;
         var emailerror1 = '';
         var emailstyle1 ='right';
-        if(!(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(emailvalue))) {
+        if(!(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(emailvalue1))) {
             emailerror1 = '请输入正确的Email';
             emailvalue1="";
             emailstyle1="error invalid" ;
-            event.preventDefault();
+            this.addPlaceholder(emailerror1,'email');
+
+            if ( e && e.preventDefault )
+                e.preventDefault();
+            //IE中阻止函数器默认动作的方式
+            else
+                window.event.returnValue = false;
+//            return false;
         }
         this.setState({
            email:emailvalue1,
@@ -144,27 +180,27 @@ var MyForm = React.createClass({
         return (
             <form action="success.html" onSubmit={this.handleSubmit}>
                 <div>
-                    <p>
-                        <input type='text' name='username' id='username' placeholder={this.state.usernameError} className={this.state.usernameStyle} value={this.state.username}  onChange={this.handleChange.bind(this,"username")} />
+                    <p className={this.state.usernameStyle}>
+                        <input type='text' name='username' id='username' placeholder={this.state.usernameError} value={this.state.username}  onChange={this.handleChange.bind(this,"username")} />
                     </p>
-                    <p>
-                        <input type='text' name='agencyname' id='agencyname'placeholder={this.state.agencynameError} className={this.state.agencynameStyle}  value={this.state.agencyname} onChange={this.handleChange.bind(this,"agencyname") }/>
+                    <p className={this.state.agencynameStyle}>
+                        <input type='text' name='agencyname' id='agencyname'placeholder={this.state.agencynameError}  value={this.state.agencyname} onChange={this.handleChange.bind(this,"agencyname") }/>
 
                     </p>
-                    <p>
-                        <input type='text' name='phonenum' id='phonenum' placeholder={this.state.phonenumError} className={this.state.phonenumStyle} value={this.state.phonenum} onChange={this.handleChange.bind(this,"phonenum")} />
+                    <p className={this.state.phonenumStyle}>
+                        <input type='text' name='phonenum' id='phonenum' placeholder={this.state.phonenumError} value={this.state.phonenum} onChange={this.handleChange.bind(this,"phonenum")} />
                     </p>
-                    <p>
-                        <input type='text' name='verifycode' id='verifycode' style={{width:"240px"}}  placeholder={this.state.verifycodeError} className={this.state.verifycodeStyle}  onChange={this.handleChange.bind(this,"verifycode")} />
+                    <p className={this.state.verifycodeStyle}>
+                        <input type='text' name='verifycode' id='verifycode' style={{width:"240px"}}  placeholder={this.state.verifycodeError}  onChange={this.handleChange.bind(this,"verifycode")} />
                         <input type="button"   value={this.state.btntxt} style={{width:"150px",height:"40px",marginLeft:"10px",borderRadius:'5px'}} className={this.state.btnstyle} disabled={this.state.btndisable} onClick={this.clickHandle} />
 
                     </p>
-                    <p>
-                        <input type='text' name='email'  id='email' placeholder={this.state.emailError} className={this.state.emailStyle}  value={this.state.email} onChange={this.handleChange.bind(this,"email")} />
+                    <p className={this.state.emailStyle}>
+                        <input type='text' name='email'  id='email' placeholder={this.state.emailError}   value={this.state.email} onChange={this.handleChange.bind(this,"email")} />
 
                     </p>
-                    <p>
-                        <input type='text' name='qq' id='qq' placeholder="QQ号码" value={this.state.qq} className={this.state.qqStyle} onChange={this.handleChange.bind(this,"qq")} />
+                    <p className={this.state.qqStyle}>
+                        <input type='text' name='qq' id='qq' placeholder="QQ号码" value={this.state.qq}  onChange={this.handleChange.bind(this,"qq")} />
                     </p>
                 </div>
                 <input type="submit" style={{width:"420px",height:"40px",marginTop:"20px", borderRadius:'5px'}} className="btn" value="提交"/>
