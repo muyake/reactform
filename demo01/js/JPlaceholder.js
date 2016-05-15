@@ -22,18 +22,31 @@ var JPlaceHolder = {
     fix : function(){
         jQuery(':input[placeholder]').each(function(index, element) {
             var self = $(this), txt = self.attr('placeholder');
-            self.wrap($('<div></div>').css({position:'relative', zoom:'1', border:'none', background:'none', padding:'none', margin:'none'}));
-            var pos = self.position(), h = self.outerHeight(true), paddingleft = self.css('padding-left');
-            var holder = $('<span></span>').text(txt).css({position:'absolute', left:pos.left, top:pos.top, height:h, lienHeight:h, paddingLeft:paddingleft, color:'#aaa'}).appendTo(self.parent());
+//            self.wrap($('<div></div>').css({position:'relative', zoom:'1', border:'none', background:'none', padding:'none', margin:'none'}));
+//            var pos = self.position(), h = self.outerHeight(true), paddingleft = self.css('padding-left');
+//            var holder = $('<span></span>').text(txt).css({position:'absolute', left:pos.left, top:pos.top, height:h, lienHeight:h, paddingLeft:paddingleft, color:'#aaa'}).appendTo(self.parent());
+
+
+            var $wrap = $('<div class="wrap_placeholder"></div>');
+            var holder = $('<span></span>').text(txt).appendTo($wrap);
+            self.parent().append($wrap);
+            var w = self.outerWidth(),w1 = holder.outerWidth(),h = $wrap.outerHeight()+self.outerHeight();
+            next = self.next();
+            if(next.length && next[0] != $wrap[0]){
+                w += self.next().outerWidth();
+            }
+//            alert(w+"::"+w1);
+            $wrap.css({"margin-top": -h/2,'margin-bottom':10});
+            holder.css({"position": "relative","left":(w1-w)/2+20});
             self.focusin(function(e) {
-                holder.hide();
+                holder.css({opacity: 0})
             }).focusout(function(e) {
                     if(!self.val()){
-                        holder.show();
+                        holder.css({opacity: 1})
                     }
                 });
             holder.click(function(e) {
-                holder.hide();
+                holder.css({opacity: 0})
                 self.focus();
             });
         });
