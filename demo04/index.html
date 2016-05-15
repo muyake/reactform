@@ -6,6 +6,23 @@
     <script src="../build/browser.min.js"></script>
   </head>
   <body>
+  <section class="tryuse">
+      <div class="tryusecontent">
+          <div class="title">
+              <h1>
+                  申请试用
+              </h1>
+              <p>
+                  欢迎申请试用MATRIX，请填写以下内容，
+              </p>
+              <p style="padding-top:15px ">
+                  我们将会在24小时内联系您，为您定制账户。
+              </p>
+          </div>
+          <div id="form1" class="form" >
+          </div>
+      </div>
+  </section>
     <div id="example"></div>
     <script type="text/babel">
       var HelloMessage = React.createClass({
@@ -16,7 +33,7 @@
 
       ReactDOM.render(
         <HelloMessage name="John" />,
-        document.getElementById('example')
+        document.getElementById('form1')
       );
     </script>
   </body>

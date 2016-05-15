@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../build/es5-shim.min.js"></script>
+    <script type="text/javascript" src="../build/es5-sham.min.js"></script>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/JPlaceholder.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <title>Title</title>
+    <style type="text/css">
+        .tryuse{
+            background-image: url("./img/backimg.png");
+            background-repeat: repeat;
+            background-size: 100%;
+            width: 70%;
+            min-width: 410px;
+            margin: 0 auto;
+            background-color: red;
+        }
+        .tryusecontent {
+            color: white;
+        }
+        .tryusecontent h1{
+            font-size: 48px;
+            font-family:微软雅黑;
+            padding-top: 50px;
+            padding-top: 10px;
+        }
+        .tryusecontent p{
+            font-size: 16px;
+            font-family: 微软雅黑;
+            padding-top: 10px;
+        }
+        .title{
+            text-align: center;
+            padding: 20px;
+        }
+        .title p{
+            width: 330px;
+            font: 16px;
+            margin: 0 auto;
+        }
+        .form{
+            text-align: center;
+        }
+        .form input[type="text"] {
+            background-color: transparent;
+            border-radius: 5px;
+            width:400px ;
+            height: 40px;
+            padding-left: 20px;
+        }
+    </style>
+    <style>
+        .error{
+            color: white;
+            border: 1px solid red;
+        }
+        .right{
+            color: white;
+            border: 1px solid white;
+        }
+        .invalid:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: red;
+            opacity: 1;
+        }
+        .invalid::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: red;
+            opacity: 1;
+        }
+        input.invalid:-ms-input-placeholder{
+            color: red;
+        }
+        input.invalid::-webkit-input-placeholder {
+            color: red;
+        }
+        .btn{
+            background-color: #e82638;
+            color: white;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color:#fa3f50;
+        }
+        .btngray{
+            background-color: #898989;
+            color: white;
+            cursor: default;
+        }
+    </style>
+    <script  src="./js/jquery.min.js">
+    </script>
+    <script  src="./js/JPlaceholder.js">
+    </script>
+</head>
+<body>
+<section class="tryuse">
+    <div class="tryusecontent">
+        <div class="title">
+            <h1>
+                申请试用
+            </h1>
+            <p>
+                欢迎申请试用MATRIX，请填写以下内容，
+            </p>
+            <p style="padding-top:15px ">
+                我们将会在24小时内联系您，为您定制账户。
+            </p>
+        </div>
+        <div id="form1" class="form" >
+        </div>
+    </div>
+</section>
+<script type="text/babel" src="js/formjs.js">
+
+</script>
+</body>
+</html>

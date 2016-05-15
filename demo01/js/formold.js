@@ -1,3 +1,6 @@
+/**
+ * Created by 23687_000 on 16-5-15.
+ */
 var MyForm = React.createClass({
     componentDidMount: function(){
         //执行
@@ -83,64 +86,59 @@ var MyForm = React.createClass({
 
     handleSubmit:function (e) {
         //用户名验证
-        var usernamevalue1 = this.state.username;
-        var usererror1 = '';
-        var userstyle1="right";
-        if(usernamevalue1.trim()=='') {
-            usererror1 = '请输入用户名';
-            userstyle1="error invalid" ;
+        var usernamevalue = this.state.username;
+        var usererror = '';
+        var userstyle="right";
+        if(usernamevalue.trim()=='') {
+            usererror = '请输入用户名';
+            userstyle="error invalid" ;
             e.preventDefault();
         }
         this.setState({
-            usernameError: usererror1,
-            usernameStyle:  userstyle1
+            usernameError: usererror,
+            usernameStyle:  userstyle
         });
         //机构名称验证
-        var agencynamevalue1 = this.state.agencyname;
-        var agencynameerror1 = '';
-        var agencynamestyle1="right";
-        if(agencynamevalue1.trim()=='') {
-            agencynameerror1 = '请输入机构名称';
-            agencynamestyle1="error invalid" ;
+        var agencynamevalue = this.state.agencyname;
+        var agencynameerror = '';
+        var agencynamestyle="right";
+        if(agencynamevalue.trim()=='') {
+            agencynameerror = '请输入机构名称';
+            agencynamestyle="error invalid" ;
             event.preventDefault();
         }
         this.setState({
-            agencynameError: agencynameerror1,
-            agencynameStyle:agencynamestyle1
+            agencynameError: agencynameerror,
+            agencynameStyle:agencynamestyle
         });
         //电话验证
-        var phonenumvalue1 = this.state.phonenum;
-        var phonenumerror1 = '';
-        var phonenumstyle1="right";
-        if(!(/^1[3|4|5|7|8]\d{9}$/.test(phonenumvalue1))) {
-            phonenumerror1 = '请输入正确的手机号';
-            phonenumstyle1="error invalid" ;
-            phonenumvalue1="";
+        var phonenumvalue = this.state.phonenum;
+        var phonenumerror = '';
+        var phonenumstyle="right";
+        if(!(/^1[3|4|5|7|8]\d{9}$/.test(phonenumvalue))) {
+            phonenumerror = '请输入正确的手机号';
+            phonenumstyle="error invalid" ;
             e.preventDefault();
         }
         this.setState({
-            phonenum:phonenumvalue1,
-            phonenumError: phonenumerror1,
-            phonenumStyle: phonenumstyle1
+            phonenumError: phonenumerror,
+            phonenumStyle: phonenumstyle
         });
         // 公司邮箱验证
-        var emailvalue1 = this.state.email;
-        var emailerror1 = '';
-        var emailstyle1 ='right';
+        var emailvalue = this.state.email;
+        var emailerror = '';
+        var emailstyle ='right';
         if(!(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(emailvalue))) {
-            emailerror1 = '请输入正确的Email';
-            emailvalue1="";
-            emailstyle1="error invalid" ;
+            emailerror = '请输入正确的Email';
+            emailstyle="error invalid" ;
             event.preventDefault();
         }
         this.setState({
-           email:emailvalue1,
-            emailError: emailerror1,
-            emailStyle:  emailstyle1
+            emailError: emailerror,
+            emailStyle:  emailstyle
         });
     },
     render: function() {
-
         return (
             <form action="success.html" onSubmit={this.handleSubmit}>
                 <div>
@@ -148,31 +146,20 @@ var MyForm = React.createClass({
                         <input type='text' name='username' id='username' placeholder={this.state.usernameError} className={this.state.usernameStyle} value={this.state.username}  onChange={this.handleChange.bind(this,"username")} />
                     </p>
                     <p>
-                        <input type='text' name='agencyname' id='agencyname'placeholder={this.state.agencynameError} className={this.state.agencynameStyle}  value={this.state.agencyname} onChange={this.handleChange.bind(this,"agencyname") }/>
+                        <input type='text' name='agencyname'style={{width:"240px"}} id='agencyname'placeholder={this.state.agencynameError} className={this.state.agencynameStyle}  value={this.state.agencyname} onChange={this.handleChange.bind(this,"agencyname") }/>
 
                     </p>
                     <p>
-                        <input type='text' name='phonenum' id='phonenum' placeholder={this.state.phonenumError} className={this.state.phonenumStyle} value={this.state.phonenum} onChange={this.handleChange.bind(this,"phonenum")} />
+                        <input type='text' name='phonenum' id='phonenum' placeholder={this.state.phonenumError}  className={this.state.phonenumStyle} value={this.state.phonenum} onChange={this.handleChange.bind(this,"phonenum")} />
                     </p>
-                    <p>
-                        <input type='text' name='verifycode' id='verifycode' style={{width:"240px"}}  placeholder={this.state.verifycodeError} className={this.state.verifycodeStyle}  onChange={this.handleChange.bind(this,"verifycode")} />
-                        <input type="button"   value={this.state.btntxt} style={{width:"150px",height:"40px",marginLeft:"10px",borderRadius:'5px'}} className={this.state.btnstyle} disabled={this.state.btndisable} onClick={this.clickHandle} />
 
-                    </p>
-                    <p>
-                        <input type='text' name='email'  id='email' placeholder={this.state.emailError} className={this.state.emailStyle}  value={this.state.email} onChange={this.handleChange.bind(this,"email")} />
-
-                    </p>
-                    <p>
-                        <input type='text' name='qq' id='qq' placeholder="QQ号码" value={this.state.qq} className={this.state.qqStyle} onChange={this.handleChange.bind(this,"qq")} />
-                    </p>
                 </div>
-                <input type="submit" style={{width:"420px",height:"40px",marginTop:"20px", borderRadius:'5px'}} className="btn" value="提交"/>
+                <input type="submit" value="提交"/>
             </form>
             )
     }
 });
 ReactDOM.render(
     <MyForm />,
-    document.getElementById("form1")
+    document.getElementById("div1")
 );

@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db9221bd-de01-4626-940a-44497f3461bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/img/backimg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/js/JPlaceholder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/js/addform.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/js/formjs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/ie8placehoder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/index3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/qitaie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/chunpeng.html" afterPath="$PROJECT_DIR$/demo01/chunpeng.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/formreact.iml" afterPath="$PROJECT_DIR$/.idea/formreact.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/js/formold.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/ietest.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/js/testjs.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo01/zhenggui2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/js/JPlaceholder.js" afterPath="$PROJECT_DIR$/demo01/js/JPlaceholder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/js/formjs.js" afterPath="$PROJECT_DIR$/demo01/js/formjs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/index.html" afterPath="$PROJECT_DIR$/demo01/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/index2.html" afterPath="$PROJECT_DIR$/demo01/index2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo04/index.html" afterPath="$PROJECT_DIR$/demo04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/index3.html" afterPath="$PROJECT_DIR$/demo01/index3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/testJquery.html" afterPath="$PROJECT_DIR$/demo01/testJquery.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo01/zhenggui.html" afterPath="$PROJECT_DIR$/demo01/zhenggui.html" />
     </list>
@@ -42,31 +36,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="zhenggui.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo01/zhenggui.html">
+      <file leaf-file-name="zhenggui2.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo01/zhenggui2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="31" selection-start="1617" selection-end="1617" vertical-scroll-proportion="-2.7142856" vertical-offset="969" max-vertical-offset="2375">
+            <state line="6" column="45" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2432">
               <folding>
                 <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formjs.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo01/js/formjs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="19" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.39084506" vertical-offset="1051" max-vertical-offset="3363">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="placehoder.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo01/placehoder.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="289" selection-end="299" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="1824">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,16 +72,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/demo01/index.html" />
         <option value="$PROJECT_DIR$/demo01/index2.html" />
-        <option value="$PROJECT_DIR$/demo01/js/JPlaceholder.js" />
         <option value="$PROJECT_DIR$/demo01/qitaie.html" />
         <option value="$PROJECT_DIR$/demo01/ie8placehoder.html" />
         <option value="$PROJECT_DIR$/demo01/chunpeng.html" />
-        <option value="$PROJECT_DIR$/demo01/index3.html" />
         <option value="$PROJECT_DIR$/demo01/js/addform.js" />
-        <option value="$PROJECT_DIR$/demo01/zhenggui.html" />
         <option value="$PROJECT_DIR$/demo01/placehoder.html" />
+        <option value="$PROJECT_DIR$/demo01/ietest.html" />
+        <option value="$PROJECT_DIR$/demo01/js/testjs.jsx" />
+        <option value="$PROJECT_DIR$/demo01/index3.html" />
+        <option value="$PROJECT_DIR$/demo04/index.html" />
+        <option value="$PROJECT_DIR$/demo01/zhenggui.html" />
+        <option value="$PROJECT_DIR$/demo01/testJquery.html" />
+        <option value="$PROJECT_DIR$/demo01/js/JPlaceholder.js" />
+        <option value="$PROJECT_DIR$/demo01/js/formold.js" />
+        <option value="$PROJECT_DIR$/demo01/index.html" />
+        <option value="$PROJECT_DIR$/demo01/zhenggui2.html" />
         <option value="$PROJECT_DIR$/demo01/js/formjs.js" />
       </list>
     </option>
@@ -135,7 +117,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -147,119 +129,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo04" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reactform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -269,6 +138,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -276,14 +146,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -294,15 +156,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -338,14 +208,14 @@
     <option name="totallyTimeSpent" value="9964000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20278184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -353,12 +223,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -380,32 +250,58 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/demo01/zhenggui2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="45" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2432">
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/zhenggui.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="20" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5624" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo01/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4693">
-          <folding />
-        </state>
+        <state line="16" column="32" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="4693" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/zhenggui.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="18" selection-start="3052" selection-end="3052" vertical-scroll-proportion="0.0" vertical-offset="1860" max-vertical-offset="2413" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/js/formjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="21" selection-start="4095" selection-end="4095" vertical-scroll-proportion="0.0" vertical-offset="2679" max-vertical-offset="3401" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/placehoder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="20" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="1824" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4693" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo02/daoshu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo02/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo03/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo03/daoshu2.html">
@@ -415,154 +311,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo02/daoshu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27669904" vertical-offset="171" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.27669904" vertical-offset="171" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo02/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="9" selection-start="513" selection-end="513" vertical-scroll-proportion="-12.892858" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo03/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="28.5" vertical-offset="798" max-vertical-offset="1615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo04/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="19" selection-start="0" selection-end="550" vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/js/JPlaceholder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="149" selection-end="149" vertical-scroll-proportion="0.14705883" vertical-offset="0" max-vertical-offset="912">
-          <folding />
-        </state>
+        <state line="19" column="9" selection-start="513" selection-end="513" vertical-scroll-proportion="-12.892858" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/ie8placehoder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/chunpeng.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="6" selection-start="896" selection-end="896" vertical-scroll-proportion="0.122977346" vertical-offset="570" max-vertical-offset="1216">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/20160512.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="9.821428" vertical-offset="446" max-vertical-offset="1064">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="38" selection-start="1171" selection-end="1171" vertical-scroll-proportion="-2.5" vertical-offset="766" max-vertical-offset="4655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="0" selection-end="7445" vertical-scroll-proportion="-3.9642856" vertical-offset="649" max-vertical-offset="4275">
-          <folding />
-        </state>
+        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="589" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/qitaie.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="91" selection-end="91" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="551">
-          <folding />
-        </state>
+        <state line="6" column="6" selection-start="91" selection-end="91" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="551" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/success.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/testJquery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.6785715" vertical-offset="47" max-vertical-offset="665">
-          <folding>
-            <marker date="1463273434843" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/test3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="14" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.38511327" vertical-offset="883" max-vertical-offset="2356">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo01/test2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="6" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.43042073" vertical-offset="646" max-vertical-offset="1292">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="28" selection-start="2907" selection-end="2907" vertical-scroll-proportion="-3.0714285" vertical-offset="1738" max-vertical-offset="2356">
-          <folding />
-        </state>
+        <state line="96" column="28" selection-start="2907" selection-end="2907" vertical-scroll-proportion="-3.0714285" vertical-offset="1738" max-vertical-offset="2356" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/js/addform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="45" selection-end="116" vertical-scroll-proportion="0.05882353" vertical-offset="0" max-vertical-offset="646">
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="4" column="0" selection-start="45" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/20160512.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="-0.27854672" vertical-offset="332" max-vertical-offset="1064" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/chunpeng.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="28" selection-start="1020" selection-end="1020" vertical-scroll-proportion="1.314879" vertical-offset="0" max-vertical-offset="1216" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/index3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="58" selection-end="401" vertical-scroll-proportion="0.122977346" vertical-offset="0" max-vertical-offset="1045">
-          <folding />
-        </state>
+        <state line="37" column="25" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-21.892857" vertical-offset="90" max-vertical-offset="1026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="54" selection-start="3237" selection-end="3237" vertical-scroll-proportion="-0.74401474" vertical-offset="2684" max-vertical-offset="4275" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="6" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.4602076" vertical-offset="646" max-vertical-offset="1292" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/test3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="47" selection-start="3031" selection-end="3031" vertical-scroll-proportion="2.4411764" vertical-offset="489" max-vertical-offset="2356" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/ietest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="38" selection-start="2907" selection-end="2907" vertical-scroll-proportion="0.15929204" vertical-offset="2038" max-vertical-offset="5681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/testJquery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="7" selection-start="195" selection-end="195" vertical-scroll-proportion="0.2301038" vertical-offset="0" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/placehoder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="289" selection-end="299" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="1824">
-          <folding />
-        </state>
+        <state line="54" column="25" selection-start="1295" selection-end="1295" vertical-scroll-proportion="1.3026549" vertical-offset="290" max-vertical-offset="1824" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo04/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="38" selection-start="938" selection-end="938" vertical-scroll-proportion="-14.178572" vertical-offset="268" max-vertical-offset="874" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo03/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="45" selection-start="101" selection-end="101" vertical-scroll-proportion="-3.392857" vertical-offset="0" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/js/JPlaceholder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="5" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/js/testjs.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="34" selection-start="5833" selection-end="5833" vertical-scroll-proportion="0.4864865" vertical-offset="2772" max-vertical-offset="3401" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/zhenggui.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="31" selection-start="1617" selection-end="1617" vertical-scroll-proportion="-2.7142856" vertical-offset="969" max-vertical-offset="2375">
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="115" column="14" selection-start="3080" selection-end="3080" vertical-scroll-proportion="0.4342762" vertical-offset="1924" max-vertical-offset="5624" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/js/formold.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="111" selection-end="111" vertical-scroll-proportion="0.12816189" vertical-offset="0" max-vertical-offset="3230" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo01/js/formjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="19" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.39084506" vertical-offset="1051" max-vertical-offset="3363">
-          <folding />
+        <state line="11" column="27" selection-start="296" selection-end="296" vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="3477" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="17" selection-start="1140" selection-end="1144" vertical-scroll-proportion="0.6349481" vertical-offset="450" max-vertical-offset="1064" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo01/zhenggui2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="45" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2432">
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

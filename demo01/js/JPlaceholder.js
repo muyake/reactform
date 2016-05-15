@@ -39,7 +39,3 @@ var JPlaceHolder = {
         });
     }
 };
-//执行
-jQuery(function(){
-    JPlaceHolder.init();
-});
