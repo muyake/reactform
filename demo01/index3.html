@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../build/es5-shim.min.js"></script>
+    <script type="text/javascript" src="../build/es5-sham.min.js"></script>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        .error{
+            border: 1px solid red;
+        }
+        .right{
+            border: 1px solid black;
+        }
+        .invalid:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: red;
+            opacity: 1;
+        }
+        .invalid::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: red;
+            opacity: 1;
+        }
+        input.invalid:-ms-input-placeholder{
+            color: red;
+        }
+        input.invalid::-webkit-input-placeholder {
+            color: red;
+        }
+        .btn{
+            background-color: red;
+            color: white;
+        }
+        .btngray{
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script type="text/babel" src="js/formjs.js">
+    </script>
+<script type="text/babel" src="js/addform.js">
+</script>
+</body>
+</html>
