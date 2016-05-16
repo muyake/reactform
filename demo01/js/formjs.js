@@ -74,8 +74,6 @@ var MyForm = React.createClass({
             phonenumStyle: phonenumstyle1
         });
 
-
-
         if(!this.interval)
         {
             var text=   " (" + this.sleep-- +")秒后重新发送";
@@ -112,8 +110,20 @@ var MyForm = React.createClass({
     },
     addPlaceholder: function(msg,id){
         var $p = $('#'+id).parent();
-        if($p.find('.wrap_placeholder').length){
-            $p.find('.wrap_placeholder span').text(msg);
+        var $wrap = $p.find('.wrap_placeholder');
+        if($wrap.length){
+            var holder = $wrap.find('span').text(msg);
+            var $input = $p.find("input[type='text']");
+
+            var w =  $('#'+id).outerWidth();
+            var w1 = holder.outerWidth();
+            var next = $input.next();
+            if(next.length && next[0] != $wrap[0]){
+                w += $input.next().outerWidth();alert(w);
+            }
+            holder.css({"position": "relative","left":(w1-w)/2+20});
+
+
             $p.find("input[type='text']").trigger("focusout");
         }
     },
